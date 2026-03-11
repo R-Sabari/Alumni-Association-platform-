@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h2>Registered Alumni</h2>
+
+<table border="1">
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Year</th>
+<th>Department</th>
+</tr>
+
+{% for a in alumni %}
+
+<tr>
+<td>{{a[0]}}</td>
+<td>{{a[1]}}</td>
+<td>{{a[2]}}</td>
+<td>{{a[3]}}</td>
+<td>{{a[4]}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
